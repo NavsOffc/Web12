@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WA Bug Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>WA Bug Sender</h1>
+    <button onclick="addSender()">Add Sender</button>
+    <div id="sendBugForm">
+        <select id="senderId"><option value="">Select Sender</option></select>
+        <select id="bugType">
+            <option value="blank">Blank</option>
+            <option value="force-close">Force Close</option>
+            <option value="stuck-logo">Stuck Logo</option>
+        </select>
+        <input type="text" id="targetNumber" placeholder="Target Number (e.g., 1234567890)">
+        <button onclick="sendBug()">Send Bug</button>
+    </div>
+    <h2>File Manager</h2>
+    <input type="text" id="fileSenderId" placeholder="Sender ID">
+    <button onclick="listFiles()">List Files</button>
+    <button onclick="uploadFile()">Upload File</button>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
